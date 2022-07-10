@@ -195,3 +195,12 @@ En la línea {2}, tenemos los operadores de asignación. En la siguiente tabla t
 | *=                      | Asignación de multiplicación (x *= y) === (x = x * y)   |
 | /=                      | Asignación de división (x /= y) === (x = x / y)    |
 | %=                     | Asignación de residuo (x %= y) === (x = x % y)    |
+
+En la línea {3}, tenemos los operadores lógicos. En la siguiente tabla, tenemos los operadores y sus descripciones.
+| Operadores lógicos | Descripción |
+|------------------------|-------------|
+| &&                      | And (Y)    |
+| (||)                      | Or (O) |
+| !                      | Not (Negación)     |
+
+
