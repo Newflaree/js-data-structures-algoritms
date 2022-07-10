@@ -186,7 +186,7 @@ En la línea {1}, tenemos los operadores aritméticos. En la siguiente tabla, te
 | ++                     | Incrementar     |
 | --                     | Decrementar     |
 
-En la línea {2}, tenemos los operadores de asignación. En la siguiente tabla tenemos los operadores y su descripción
+En la línea {2}, tenemos los operadores de asignación. En la siguiente tabla tenemos los operadores y su descripción:
 | Operadores de asignación | Descripción |
 |------------------------|-------------|
 | =                      | Asignación     |
@@ -196,11 +196,68 @@ En la línea {2}, tenemos los operadores de asignación. En la siguiente tabla t
 | /=                      | Asignación de división (x /= y) === (x = x / y)    |
 | %=                     | Asignación de residuo (x %= y) === (x = x % y)    |
 
-En la línea {3}, tenemos los operadores lógicos. En la siguiente tabla, tenemos los operadores y sus descripciones.
+En la línea {3}, tenemos los operadores de comparación. En la siguiente tabla, tenemos los operadores y sus descripciones:
+| Operadores de comparación | Descripción |
+|------------------------|-------------|
+| ==                      | Igual a     |
+| ===                      | Igual estricto a (Tanto valor como tipo) |
+| !=                     |  Diferente   |
+| >                      | Mayor qué    |
+| >=                      | Mayor o igual qué |
+| <                     | Menor qué    |
+| <=                     | Menor o igual qué     |
+
+Finalmente, en la línea {4}, tenemos los operadores lógicos. En la siguiente tabla, tenemos los operadores y sus descripciones:
+var doubleBars = '||';
 | Operadores lógicos | Descripción |
 |------------------------|-------------|
 | &&                      | And (Y)    |
-| (||)                      | Or (O) |
+| doubleBars                      | Or (O) |
 | !                      | Not (Negación)     |
 
+JS también soporta operadores bit a bit, que se muestran a continuación.
+```
+console.log( '5 & 1:', (5 & 1) );
+console.log( '5 | 1:', (5 | 1) );
+console.log( '~ 5:', (~5) );
+console.log( '5 ^ 1:', (5 ^ 1) );
+console.log( '5 << 1:', (5 << 1) );
+console.log( '5 >> 1:', (5 >> 1) );
+```
+
+La siguiente tabla contiene una descripción más detallada de los operadores bit a bit.
+var singleBar = '|';
+| Operadores bit a bit | Descripción |
+|------------------------|-------------|
+| &                      | And (Y)     |
+| singleBar              | Or (O)      |
+| ~                      | Not (Negación)   |
+| ^                      | Xor     |
+| <<                     | Left shift     |
+| >>                     | Right shift     |
+
+El operador 'typeof' retorna el tipo de la viariable o expresión. Por ejemplo, echemos un vistazo al siguiente código:
+```
+console.log( 'typeof num: ', typeof num );
+console.log( 'typeof Packt: ', typeof 'Packt' );
+console.log( 'typeof true: ', typeof true );
+console.log( 'typeof [1,2,3]: ', typeof [1,2,3] );
+console.log( 'typeof {name:John}: ', typeof {name:'John'} );
+```
+
+La salida debería de ser la siguiente:
+  typeof num: number
+  typeof Packt: string
+  typeof true: boolean
+  typeof [1,2,3]: object
+  typeof {name:John}: object
+
+JS también soporta el operador 'delete', el cual elimina una propiedad de un objeto. Echemos un vistazo al siguiente código:
+```
+var myObj = { name: 'John', age: 21 };
+delete myObj.age;
+console.log( myObj ); // Retorna un objeto {name:'John'}
+```
+
+En los algoritmos de este libro, usaremos muchos de estos operadores.
 
