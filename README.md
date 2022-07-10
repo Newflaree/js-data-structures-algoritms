@@ -14,7 +14,7 @@ Lo que cubriremos:
 - Funciones.
 - Programación orientada a objetos en JS.
 - Depuración y herramientas.
-- Introducción a ECMAScript 5 y ECMAScript 7.
+- Introducción a ECMAScript 6 y ECMAScript 7.
 
 ### Estructuras de datos y algorítmos en JS
 En este libro, aprenderás sobre las estructuras de datos y algorítmos más usados. Sin embargo, ¿Por qué usar JS para aprender sobre estructuras de datos y algorítmos? Ya hemos respondido a esta pregunta. JS es muy popular y adecuado para aprender estructuras de datos porque es un lenguage funcional. También, puede ser una forma divertida de aprender algunas cosas nuevas como esta es diferente aprenderlas con un lenguje estandar.
@@ -186,4 +186,12 @@ En la línea {1}, tenemos los operadores aritméticos. En la siguiente tabla, te
 | ++                     | Incrementar     |
 | --                     | Decrementar     |
 
-
+En la línea {2}, tenemos los operadores de asignación. En la siguiente tabla tenemos los operadores y su descripción
+| Operadores de asignación | Descripción |
+|------------------------|-------------|
+| =                      | Asignación     |
+| +=                      | Asignación de adición (x += y) === (x = x + y) |
+| -=                      | Asignación de Sustracción (x -= y) === (x = x - y)   |
+| *=                      | Asignación de multiplicación (x *= y) === (x = x * y)   |
+| /=                      | Asignación de división (x /= y) === (x = x / y)    |
+| %=                     | Asignación de residuo (x %= y) === (x = x % y)    |
