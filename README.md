@@ -261,3 +261,43 @@ console.log( myObj ); // Retorna un objeto {name:'John'}
 
 En los algoritmos de este libro, usaremos muchos de estos operadores.
 
+
+### Verdadero y falso
+En JS, verdadero y falso son un poso complicados. En muchos lenguales, las variables booleans true y false representan resultados true/false. En JS, un string como 'Packt' tiene el valor verdadero, por ejemplo.
+
+La siguiente tabla nos ayuda a entender mejor cómo trabajan verdadero y falso en JS.
+| Tipo de valor | Descripción |
+|---------------|-------------|
+| undefined     | false       |
+| null          | false       |
+| Boolean       | true es true y false es false |
+| Number        | El resultado es false para +0, -0 o NaN, de otro modo el resultado es true     |
+| String        | El resultado es falso si el string está vacío (length = 0), de otro modo el resultado es true (length > 1)    |
+| Object        | true   |
+
+Consideremos algunos ejemplos y verifiquemos sus salidas:
+```
+function testTruthy( val ) {
+  return val ? console.log( 'trustry' : console.log( 'falsy' ) );
+}
+
+testTruthy( true ); // true
+testTruthy( false ); // false
+testTruthy( new Boolean( false ) ); // true (Los objetos siempre son true)
+
+testTruthy( '' ); // false
+testTruthy( 'Packt' ); // true
+testTruthy( new String( '' ) ); // true (Los objetos siempre son true)
+
+testTruthy( 1 ); // true
+testTruthy( -1 ); // true
+testTruthy( NaN ); // false
+testTruthy( new Number( NaN ) ); // true (Los objetos siempre son true)
+
+testTruthy( {} ); // true (Los objetos siempre son true)
+
+var obj = { name: 'John' };
+testTruthy( obj ); // true
+testTruthy( obj.name ); // true
+testTruthy( obj.age ); // false ( la variable age no existe )
+```
